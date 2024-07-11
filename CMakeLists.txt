@@ -4,6 +4,13 @@ project(ToyCompiler)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(ToyCompiler main.cpp
-        bytecode/chunk.cpp
-        bytecode/chunk.h
-        common.h)
+        core/chunk.cpp
+        core/chunk.h
+        common.h
+        core/scanner.cpp
+        core/scanner.h
+        core/vm.cpp
+        core/vm.h
+        core/parser.cpp
+        core/parser.h
+)
