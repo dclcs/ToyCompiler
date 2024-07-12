@@ -79,6 +79,12 @@ build CMakeFiles/ToyCompiler.dir/core/parser.cpp.o: CXX_COMPILER__ToyCompiler_un
   OBJECT_DIR = CMakeFiles/ToyCompiler.dir
   OBJECT_FILE_DIR = CMakeFiles/ToyCompiler.dir/core
 
+build CMakeFiles/ToyCompiler.dir/core/value.cpp.o: CXX_COMPILER__ToyCompiler_unscanned_Debug /Users/cld/Documents/workspace/ToyCompiler/core/value.cpp || cmake_object_order_depends_target_ToyCompiler
+  DEP_FILE = CMakeFiles/ToyCompiler.dir/core/value.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/ToyCompiler.dir
+  OBJECT_FILE_DIR = CMakeFiles/ToyCompiler.dir/core
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ToyCompiler
@@ -87,7 +93,7 @@ build CMakeFiles/ToyCompiler.dir/core/parser.cpp.o: CXX_COMPILER__ToyCompiler_un
 #############################################
 # Link the executable ToyCompiler
 
-build ToyCompiler: CXX_EXECUTABLE_LINKER__ToyCompiler_Debug CMakeFiles/ToyCompiler.dir/main.cpp.o CMakeFiles/ToyCompiler.dir/core/chunk.cpp.o CMakeFiles/ToyCompiler.dir/core/scanner.cpp.o CMakeFiles/ToyCompiler.dir/core/vm.cpp.o CMakeFiles/ToyCompiler.dir/core/parser.cpp.o
+build ToyCompiler: CXX_EXECUTABLE_LINKER__ToyCompiler_Debug CMakeFiles/ToyCompiler.dir/main.cpp.o CMakeFiles/ToyCompiler.dir/core/chunk.cpp.o CMakeFiles/ToyCompiler.dir/core/scanner.cpp.o CMakeFiles/ToyCompiler.dir/core/vm.cpp.o CMakeFiles/ToyCompiler.dir/core/parser.cpp.o CMakeFiles/ToyCompiler.dir/core/value.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
   OBJECT_DIR = CMakeFiles/ToyCompiler.dir
   POST_BUILD = :

@@ -13,4 +13,6 @@ add_executable(ToyCompiler main.cpp
         core/vm.h
         core/parser.cpp
         core/parser.h
+        core/value.cpp
+        core/value.h
 )

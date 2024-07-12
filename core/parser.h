@@ -54,6 +54,7 @@ private:
     static void unary(Parser *parser);
     static void binary(Parser *parser);
     static void number(Parser *parser);
+    static void literal(Parser* parser);
     void emitByte(uint8_t byte);
     void emitBytes(uint8_t byte1, uint8_t byte2);
     void emitReturn();

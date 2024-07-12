@@ -6,10 +6,11 @@
 #define TOYCOMPILER_CHUNK_H
 
 #include "../common.h"
+#include "value.h"
+
 using namespace std;
 
 typedef uint8_t INSTRUCTION_TYPE;
-typedef double Value;
 
 typedef enum {
     OP_RETURN,
@@ -18,8 +19,29 @@ typedef enum {
     OP_ADD,
     OP_SUBTRACT,
     OP_MULTIPLY,
-    OP_DIVIDE
+    OP_DIVIDE,
+    OP_NOT,
+    OP_LESS,
+    OP_GREATER,
+    OP_EQUAL,
+    OP_TRUE,
+    OP_FALSE,
+    OP_NIL
 } OpCode;
+
+static void printValue(Value value) {
+    switch (value.type) {
+        case VAL_BOOL:
+            printf(AS_BOOL(value) ? "true" : "false");
+            break;
+        case VAL_NIL:
+            printf("nil");
+            break;
+        case VAL_NUMBER:
+            printf("%g", AS_NUMBER(value));
+            break;
+    }
+}
 
 class Chunk {
 public:

@@ -4,9 +4,6 @@
 
 #include "chunk.h"
 
-static void printValue(Value value) {
-    printf("%g", value);
-}
 static int simpleInstruction(const char* name, int offset) {
     printf("%s\n", name);
     return offset + 1;
@@ -19,7 +16,6 @@ static int constantInstruction(const char* name, Chunk* chunk, int offset) {
     printf("'\n");
     return offset + 2;
 }
-
 
 Chunk::Chunk() {
     this->instructions = vector<INSTRUCTION_TYPE>();
@@ -78,6 +74,20 @@ int Chunk::disassembleInstruction(int offset) {
             return simpleInstruction("OP_MULTIPLY", offset);
         case OP_DIVIDE:
             return simpleInstruction("OP_DIVIDE", offset);
+        case OP_NIL:
+            return simpleInstruction("OP_NIL", offset);
+        case OP_TRUE:
+            return simpleInstruction("OP_TRUE", offset);
+        case OP_FALSE:
+            return simpleInstruction("OP_FALSE", offset);
+        case OP_EQUAL:
+            return simpleInstruction("OP_EQUAL", offset);
+        case OP_GREATER:
+            return simpleInstruction("OP_GREATER", offset);
+        case OP_LESS:
+            return simpleInstruction("OP_LESS", offset);
+        case OP_NOT:
+            return simpleInstruction("OP_NOT", offset);
         default:
             printf("Unknown opcode %d\n", instruction);
             return offset + 1;

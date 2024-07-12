@@ -28,12 +28,13 @@ public:
     void freeVM();
     void push(Value value);
     Value pop();
+    Value peek(int distance);
     InterpretResult interpret(const char* source);
     void resetStack();
     InterpretResult run();
     INSTRUCTION_TYPE read_byte();
     Value read_constant();
-    Value binary_op(OpCode code);
+    void runtimeError(const char* format, ...);
 };
 
 
